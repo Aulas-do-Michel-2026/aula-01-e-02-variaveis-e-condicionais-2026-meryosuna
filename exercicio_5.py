@@ -55,9 +55,16 @@ Resposta:
 Não
 
 """
-Cromossomo=(input("Digite o cromosomo:")) 
-Posiçao=int(input("Digite a posiçao:"))
-Genoma=input("Digite o genoma de referência:") 
-if Cromossomo== "chr17" and (41196312<= Posiçao<= 41277500) and Genoma=="hg19" or Cromossomo=="chr17" and (43044295<= Posiçao<= 43125483) and Genoma=="hg38": 
-    print("Sim") 
-else: print("Não")
+Cromossomo = input("Digite o cromosomo: ")
+Posicao = int(input("Digite a posicao: "))
+Genoma = input("Digite o genoma de referência: ")
+
+if Cromossomo == "chr17":
+    if Genoma == "hg19" and 41196312 <= Posicao <= 41277500:
+        print("Sim")
+    elif Genoma == "hg38" and 43044295 <= Posicao <= 43125483:
+        print("Sim")
+    else:
+        print("Não")
+else:
+    print("Não")
